@@ -4,7 +4,7 @@ CPPFLAGS = -g -std=c++11 -O0 -Wall -fPIC -Wno-format-security -I./
 LINKFLAGS = -L./log -lcomlog -lpthread -lgflags -lprotobuf -L./libs/tcmalloc/ -ltcmalloc
 SHAREDFLAGS = -shared
 CPPS = $(wildcard ./*.cpp ./*/*.cpp ./*/*/*.cpp)
-CPPOBJS = $(patsubst %.cpp, %.o, $(filter-out ./log/%, $(CPPS)))
+CPPOBJS = $(patsubst %.cpp, %.o, $(filter-out ./log/% ./example/%, $(CPPS)))
 CCS = $(wildcard  ./packet/*.cc)
 CCOBJS = $(patsubst %.cc, %.o, $(CCS))
 
