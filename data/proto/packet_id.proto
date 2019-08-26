@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+package proto;
+
+enum PacketId {
+    CS_INVALID = 0;
+    CS_PING = 1;
+    SC_RET_PING = 2;
+};

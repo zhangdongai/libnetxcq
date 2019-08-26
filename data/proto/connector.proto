@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+package proto;
+
+message CS_Ping {
+    optional string param = 1;
+};
+
+message SC_RetPing {
+    optional string ret_param = 1;
+};
